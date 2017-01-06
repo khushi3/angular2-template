@@ -1,0 +1,45 @@
+<aside id="sidebar">
+    <div class="sidenav-outer">
+        <div class="menu-body">
+            <ul class="nav nav-pills nav-stacked sidenav">
+                <li>
+                    <img src="assets/images/3M.jpg" width="150px" class="user-avatar" />
+                    <p class="text-xs-center">Admin Portal</p>
+                </li>
+                <li>
+                      <a [routerLink]="['home']" >
+                        <i class="fa fa-home"></i>
+                        <span>&nbsp; Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a [routerLink]="['']"><i class="fa fa-shopping-cart"></i><span>&nbsp;&nbsp; Log Info</span></a>
+                </li>
+                <li class="nested" [ngClass]="{'expand' : showMenu === 'pages' }">
+                    <a (click)="addExpandClass('pages')"><i class="fa fa-chevron-circle-down"></i><span>&nbsp;&nbsp;
+                    3M Application</span></a>
+                    <ul class="submenu">
+                         <li>
+                            <a [routerLink]="['blankpage']"><span>360 ENCOMPASS</span></a>
+                        </li>
+                        <li>
+                            <a ><span>Code Assist</span></a>
+                        </li>
+                        <li>
+                            <a ><span>STS</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- <li> 
+                    <a href='http://www.strapui.com/themes/ani-angular-2-bootstrap-4-theme/'>
+                        <i class="fa fa-shopping-cart"></i>
+                        <span>&nbsp; Ani Premium Theme</span>
+                    </a>
+                </li> -->
+                <li>
+                    <a [routerLink]="['']"><i class="fa fa-sign-out"></i><span>&nbsp;&nbsp; Logout</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</aside>
